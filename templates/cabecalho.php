@@ -1,4 +1,8 @@
-<?php ?>
+<?php 
+require_once $_SERVER["DOCUMENT_ROOT"] . "/carrinho.php/index.php";
+
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,15 +15,14 @@
 <nav class="nav">
     <div class="container">
         <div class="logo">
-            <a href="#">YourLogo</a>
+            <a href="index.php"> <img src="../img/fofoCAR.png" alt="" width="300px"></a>
         </div>
         <div class="main_list" id="mainListDiv">
             <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">my work</a></li>
-                <li><a href="#">disegn</a></li>
-                <li><a href="#">dcontact</a></li>
+                <li><a href="#">carros</a></li>
+                <li><a href="#">sobre</a></li>
+                <li><a href="#">carrinho</a></li>
+                <li><a href="#">login</a></li>
             </ul>
         </div>
         <div class="media_button">
