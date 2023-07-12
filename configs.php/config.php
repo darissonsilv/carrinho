@@ -1,6 +1,6 @@
 <?php
 define('SGBD', 'mysql');
 define('DBLOCAL', 'localhost');
-define('DBNOME', 'empresa');
+define('DBNOME', 'loja');
 define('USUARIO', 'raoot');
 define('SENHA', '');
