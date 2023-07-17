@@ -1,6 +1,4 @@
-<?php 
 
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,9 +15,8 @@
         </div>
         <div class="main_list" id="mainListDiv">
             <ul>
-                <li><a href="#">carros</a></li>
-                <li><a href="#">sobre</a></li>
-                <li><a href="#">carrinho</a></li>
+                <li><a href="produto.php">carros</a></li>
+                <li><a href="cart.php">carrinho</a></li>
                 <li><a href="#">login</a></li>
             </ul>
         </div>
@@ -35,4 +32,5 @@
     
 <section class="home"></section>
 </body>
-</html>
+</html> 
+
