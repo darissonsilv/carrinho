@@ -1,122 +1,46 @@
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+.menu ul {
+    
+    list-style:none;
+    width:100%;
+    float:left;
+    padding:0px;
+    gap: 10px;
+    background:#b0afaf; 
+    box-shadow: 1px 0px 1.2px 0px #ec7676;
 }
 
-body {
-    background-color: aliceblue;
+.menu ul li a {
+    
+    text-decoration:none;   
+    color:#f4f3f3; 
+    font-family: 'open_sansregular';
 }
 
-header {
-    background-color: black;
-    color: white;
-    padding: 1rem;
-}
-
-header a {
-    color: white;
-    text-decoration: none;
-}
-
-nav {
-    display: flex;
-    justify-content: center;
-}
-
-.card-container {
-    display: flex;
-    justify-content: space-evenly;
-    margin: 1rem;
-    flex-wrap: wrap;
-}
-
-.card {
-    width: 18rem;
-    height: 18rem;
-    background-color: cadetblue;
-    border-radius: 10px;
-    box-shadow: 5px 5px 5px 0 black;
-    margin: 1rem;
-}
-
-.img-card {
+.menu ul li {
+    
+    position:relative;
+    display: block;
     width: 100%;
-    height: 10rem;
-    overflow: hidden;
+    float:left;
+    margin: 4px 15px;
+    padding: 0px;
+    border-width: 0px 0px 3px 0px;    
+    border-color:transparent;
+    border-style:solid;
 }
 
-.img-card img {
-    width: 100%;
-    border-radius: 10px 10px 0 0;
-    max-height: -webkit-fill-available;
-}
-
-.txt-card {
-    color: white;
-    text-align: center;
-    padding: 1rem;
-}
-
-button {
-    padding: 0.5rem;
-    border: none;
-    cursor: pointer;
-    background-color: rgba(128, 128, 128, 0.5);
-    margin: 1rem;
-    border-radius: 10px;
-}
-
-button:hover {
-    background-color: grey;
-}
-
-.btn-sucesso {
-    background-color: green;
-    color: white;
-}
-
-.btn-perigo {
-    background-color: red;
-    color: white;
-}
-
-.btn-aviso {
-    background-color: yellowgreen;
-    color: white;
-}
-
-.centro {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    translate: -50% -50%;
-}
-
-form {
-    background-color: darkgray;
-    padding: 1rem;
-    border-radius: 10px;
-}
-
-label {
-    margin: 0 1rem;
-    color: white;
-}
-
-.form-item {
-    margin: 1rem 0;
-    display: flex;
-    justify-content: space-between;
+.menu ul li:hover a {
+    
+    color: #007cff;
+    border-width: 0px 0px 3px 0px;    
+    border-color:#007cff;
+    border-style:solid;
 
 }
 
-.form-item input, .form-item textarea {
-    flex-grow: 1;
-}
+/*768PX BREAKPOINT*/
+@media (min-width:48em){
 
-input, textarea {
-    padding: 0.5rem;
-    border: none;
-    border-radius: 10px;
-}
+    .menu ul li { display:block; width:auto; margin: 8px 20px; padding: 10px;}
+
+} 
