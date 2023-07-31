@@ -47,6 +47,50 @@ require_once $_SERVER["DOCUMENT_ROOT"] . '/carrinho/templates/cabecalho.php';
   </button>
 </div>
 
+
+<!-- card -->
+<div class="cards-container">
+<?php
+
+    // Array com informações dos quatro cards
+    $cards = array(
+        array(
+            "titulo" => "Corolla Toyota",
+            "descricao" => "Descrição do Card 1",
+            "imagem" => "/carrinho/img/produto-1.png"
+        ),
+        array(
+            "titulo" => "Fiat Toro",
+            "descricao" => "Descrição do Card 2",
+            "imagem" => "/carrinho/img/produto-2.png"
+        ),
+        array(
+            "titulo" => "Fusca Volswagem",
+            "descricao" => "Descrição do Card 3",
+            "imagem" => "/carrinho/img/produto-3.jpg"
+        ),
+        array(
+            "titulo" => "Gol Volswagem",
+            "descricao" => "Descrição do Card 4",
+            "imagem" => "/carrinho/img/produto-4.png"
+        )
+    );
+
+    // Utilizando o foreach para exibir os quatro cards
+    foreach ($cards as $card) {
+        echo '<div class="card" style="width: 18rem;">';
+        echo '<img src="' . $card["imagem"] . '" class="card-img-top" alt="' . $card["titulo"] . '">';
+        echo '<div class="card-body">';
+        echo '<h5 class="card-title">' . $card["titulo"] . '</h5>';
+        echo '<p class="card-text">' . $card["descricao"] . '</p>';
+        echo '<a href="#" class="btn btn-primary">adicionar ao carrinho</a>';
+        echo '</div>';
+        echo '</div>';
+    }
+    
+    ?>
+    </div>
+
 <?php 
 require_once $_SERVER["DOCUMENT_ROOT"] . '/carrinho/templates/rodape.php';
 ?>

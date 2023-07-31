@@ -1,26 +1,29 @@
 <?php
-require_once $_SERVER['DOCUMENT_ROOT'] . '/carrinho/configs/config.php';
 
 
 // Configurações de conexão com o banco de dados
-$host = 'localhost';
-$db_name = 'loja';
-$username = 'seu_usuario';
-$password = 'sua_senha';
+$host = "localhost"; // Endereço do servidor MySQL
+$usuario = "root"; // Nome do usuário do banco de dados
+$senha = ""; // Senha do usuário do banco de dados
+$database = "loja"; // Nome do banco de dados
 
-try {
-    // Criação da conexão PDO
-    $conn = new PDO("mysql:host=$host;dbname=$db_name", $username, $password);
+// Cria a conexão com o banco de dados usando a extensão MySQLi
+$conn = new mysqli($host, $usuario, $senha, $database);
 
-    // Configuração do modo de erro do PDO para exceções
-    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-
-    // Definição do conjunto de caracteres para utf8 (opcional)
-    $conn->exec("SET NAMES utf8");
-} catch (PDOException $e) {
-    // Em caso de erro na conexão, exibe a mensagem de erro
-    echo "Falha na conexão com o banco de dados: " . $e->getMessage();
-    exit();
+// Verifica se houve erro na conexão
+if ($mysqli->error) {
+    die("Erro na conexão: " . $mysqli->error);
 }
 
+
+
+
+
+
+/* class conexão{
+    public static function conectar (){
+        $conn = new PDO(BD_DRIVE . "host =" . NOME_SERVIDOR . ";dbname=" NOME_BANCO,USUARIO,SENHA);
+        $conn-> setAttribute(PDO::ATTR_ERRMODE, PDO::ERROMODE_EXCEPTION); 
+       return $conn  }
+} */
 ?>
