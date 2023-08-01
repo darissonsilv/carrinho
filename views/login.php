@@ -5,28 +5,7 @@ require_once $_SERVER["DOCUMENT_ROOT"] . '/carrinho/controller.php/login_control
 require_once $_SERVER["DOCUMENT_ROOT"] . '/carrinho/db/conexao.php';
 
 
-// Aqui você pode utilizar a conexão para realizar operações de login
-// por exemplo, verificando as credenciais do usuário no banco de dados
-// e redirecionando-o para a página de perfil, caso as credenciais sejam válidas.
 
-// Exemplo de consulta de seleção (SELECT) para verificar o login
-$usuario = $_POST[""];
-$senha = $_POST["senha"];
-
-$sql = "SELECT * FROM tabela_usuarios WHERE usuario = '$usuario' AND senha = '$senha'";
-$result = $conn->query($sql);
-
-if ($result->num_rows > 0) {
-    // Credenciais válidas, redirecionar para a página de perfil ou área restrita
-    header("Location: perfil.php");
-    exit;
-} else {
-    // Credenciais inválidas, exibir mensagem de erro ou redirecionar para página de login
-    echo "Credenciais inválidas. Tente novamente.";
-}
-
-// Não esqueça de fechar a conexão após utilizá-la
-$conn->close();
 ?>
 
 <link rel="stylesheet" href="/carrinho/css/style.css">
@@ -51,7 +30,7 @@ $conn->close();
     <button class="button1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Login&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button>
 
     
-    <button class="button2" > <a href="/carrinho/views/cadastro.php">Sign Up</a></button>
+    <button class="button2" > <a href="/carrinho/views/cadastro.php">Cadastra-se</a></button>
     </a>
     </div>
    

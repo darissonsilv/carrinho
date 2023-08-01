@@ -1,0 +1,23 @@
+-- db/banco.sql --
+
+CREATE TABLE IF NOT EXISTS login (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    email VARCHAR(255) NOT NULL,
+    senha VARCHAR(16) NOT NULL,
+    nome VARCHAR(50) NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS produtos (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    capa VARCHAR(255),
+    nome VARCHAR(150) NOT NULL,
+    valor DECIMAL(10, 2) NOT NULL,
+    data DATE NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS carrinho (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    id_produto INT NOT NULL,
+    valor DECIMAL(10, 2) NOT NULL,
+    data DATE NOT NULL
+);
